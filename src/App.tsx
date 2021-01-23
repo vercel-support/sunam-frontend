@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../src/components/molecules/Header';
+import Header from './components/molecules/Header';
 
 function App() {
   return (
