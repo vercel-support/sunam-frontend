@@ -15,4 +15,19 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
   ],
+  rules: {
+    'import/extensions': 'off',
+    'no-use-before-define': 'off',
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };
