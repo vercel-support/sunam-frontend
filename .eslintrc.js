@@ -13,6 +13,7 @@ module.exports = {
     'airbnb',
     'prettier/react',
     'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:prettier/recommended',
   ],
   rules: {

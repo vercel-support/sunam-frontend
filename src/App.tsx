@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Header from '../src/components/molecules/Header';
 import Header from './components/molecules/Header';
 
 function App() {
