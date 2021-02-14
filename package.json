@@ -32,7 +32,7 @@
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js --progress --hot",
     "start": "react-scripts start",
-    "build": "webpack --optimize-minimize --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js --optimize-minimize",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint './**/*.{ts,tsx}'"
