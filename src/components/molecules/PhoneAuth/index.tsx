@@ -32,7 +32,7 @@ const PhoneAuth = () => {
 
   const handleAuthButton = () => {
     const code = authCode;
-    const { confirmationResult } = window.confirmationResult;
+    const { confirmationResult } = window;
     confirmationResult
       .confirm(code)
       .then(result => {
