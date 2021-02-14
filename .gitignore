@@ -149,4 +149,7 @@ sketch
 !.vscode/extensions.json
 *.code-workspace
 
+## Configuration Settings
+conf/firebaseConfig.tsx
+
 # End of https://www.toptal.com/developers/gitignore/api/react,node,vscode

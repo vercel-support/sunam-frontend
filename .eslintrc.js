@@ -17,12 +17,18 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    'import/no-unresolved': 0,
+    'react/prop-types': 0,
+    'no-console': 'off',
+    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
+    'prettier/prettier': 'error',
     'import/extensions': 'off',
     'no-use-before-define': 'off',
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
+    'import/no-absolute-path': [2, { esmodule: false }],
   },
   settings: {
     'import/resolver': {
