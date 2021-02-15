@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const { definitions } = new Dotenv();
 
 module.exports = {
   entry: './src/index.tsx',
@@ -35,9 +36,10 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
   },
   plugins: [
-    new Dotenv({
-      path: path.resolve(__dirname, './.env'),
-    }),
+    // new Dotenv({
+    //   path: path.resolve(__dirname, '..', '.env'),
+    // }),
+    new webpack.DefinePlugin({ ...definitions }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
