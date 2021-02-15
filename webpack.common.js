@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -34,11 +35,13 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
   },
   plugins: [
+    new Dotenv(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
       filename: 'index.html',
+      template: './public/index.html',
     }),
+    new webpack.EnvironmentPlugin(),
     new webpack.ProgressPlugin(),
   ],
 };
