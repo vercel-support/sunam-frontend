@@ -12,20 +12,8 @@ const config = {
 };
 firebase.initializeApp(config);
 
-// if (process.env.NODE_ENV === 'development') {
-//   if (!firebase.apps.length) {
-//     firebase.initializeApp(firebaseConfig);
-//   } else {
-//     const config = {
-//       apiKey: process.env.REACT_APP_APIKEY,
-//       authDomain: process.env.REACT_APP_AUTHDOMAIN,
-//       projectId: process.env.REACT_APP_PROJECTID,
-//       storageBucket: process.env.STORAGEBUCKET,
-//       messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-//       appId: process.env,
-//     };
-//     firebase.initializeApp(config);
-//   }
+// if (!firebase.apps.length) {
+//   firebase.initializeApp(firebaseConfig);
 // }
 
 export const app = firebase;
