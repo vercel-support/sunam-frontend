@@ -35,11 +35,12 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: './dist/index.html',
+      filename: 'index.html',
       template: './public/index.html',
+      inject: false,
     }),
+    new CleanWebpackPlugin(),
     new Dotenv({
       path: path.resolve(__dirname, './.env'),
     }),
