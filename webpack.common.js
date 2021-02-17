@@ -38,7 +38,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: './index.html',
       template: './public/index.html',
     }),
     new Dotenv({
