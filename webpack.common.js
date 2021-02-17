@@ -31,17 +31,14 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.join(__dirname, '/dist'),
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Sunam App',
       filename: 'index.html',
-      template: path.join(__dirname, './public/index.html'),
-      // inject: true,
-      // template: './public/index.html',
+      template: './src/index.html',
     }),
     new Dotenv({
       path: path.resolve(__dirname, './.env'),
