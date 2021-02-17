@@ -38,8 +38,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: './index.html',
       template: './public/index.html',
+      filename: 'index.html',
+      inject: true,
     }),
     new Dotenv({
       path: path.resolve(__dirname, './.env'),
