@@ -4,7 +4,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-console.log(path);
 module.exports = {
   entry: './src/index.tsx',
   module: {
@@ -33,13 +32,12 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '/dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve(__dirname, './public/index.html'),
-      // template: './public/index.html',
+      template: './src/index.html',
+      // filename: 'index.html',
     }),
     new CleanWebpackPlugin(),
     new Dotenv({
