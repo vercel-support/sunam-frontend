@@ -35,7 +35,9 @@
   "scripts": {
     "dev": "vercel env pull -y && webpack serve --config webpack.dev.js --progress --hot",
     "start": "react-scripts start",
-    "build": "vercel env pull -y --token $DEPLOYMENT_TOKEN && webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
+    "vercel": "vercel --token $DEPLOYMENT_TOKEN && vercel link --confirm && vercel env pull -y",
+    "build:vercel": "npm run vercel && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint './**/*.{ts,tsx}'"
