@@ -31,18 +31,17 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: '[name].js',
-    path: path.join(__dirname, '/dist'),
+    filename: 'bundle.js',
+    path: path.join(__dirname, './dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      // filename: 'index.html',
       template: './public/index.html',
     }),
+    new CleanWebpackPlugin(),
     new Dotenv({
       path: path.resolve(__dirname, './.env'),
     }),
-    new webpack.EnvironmentPlugin(),
-    new webpack.ProgressPlugin(),
   ],
 };
