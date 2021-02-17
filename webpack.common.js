@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-// const { definitions } = new Dotenv();
 
 module.exports = {
   entry: './src/index.tsx',
@@ -38,9 +37,11 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
+      title: 'Sunam App',
       filename: 'index.html',
-      inject: true,
+      template: path.join(__dirname, './public/index.html'),
+      // inject: true,
+      // template: './public/index.html',
     }),
     new Dotenv({
       path: path.resolve(__dirname, './.env'),
