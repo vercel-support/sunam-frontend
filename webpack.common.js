@@ -43,6 +43,6 @@ module.exports = {
     new Dotenv({
       path: path.resolve(__dirname, './.env'),
     }),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
   ],
 };
