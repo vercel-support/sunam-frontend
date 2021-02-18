@@ -15,7 +15,6 @@
     "@types/node": "^12.19.15",
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.10",
-    "dotenv": "^8.2.0",
     "dotenv-webpack": "^6.0.0",
     "firebase": "^8.2.4",
     "progress-webpack-plugin": "^1.0.12",
@@ -36,8 +35,6 @@
     "dev": "vercel env pull -y && webpack serve --config webpack.dev.js --progress --hot",
     "start": "react-scripts start",
     "build": "webpack --config webpack.prod.js",
-    "vercel": "vercel link --confirm --token $DEPLOYMENT_TOKEN && vercel env pull -y --token $DEPLOYMENT_TOKEN",
-    "build:vercel": "npm run vercel && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint './**/*.{ts,tsx}'"
