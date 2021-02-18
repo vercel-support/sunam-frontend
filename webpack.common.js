@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -11,6 +12,15 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node-modules/,
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
       },
       {
         enforce: 'pre',
@@ -24,18 +34,22 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, '/dist'),
+    path: path.resolve(__dirname, './dist'),
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new Dotenv(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
+      inject: 'body',
     }),
-    new webpack.ProgressPlugin(),
+    new CleanWebpackPlugin(),
   ],
 };
