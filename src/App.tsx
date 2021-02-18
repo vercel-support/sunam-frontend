@@ -7,6 +7,8 @@ import { ThemeProvider } from 'styled-components';
 import theme from '@/styles/theme';
 import GlobalStyle from '@/styles/globalStyles';
 
+const result = dotenv.config();
+console.log(result);
 const App: React.FC = () => {
   return (
     <div className="App">

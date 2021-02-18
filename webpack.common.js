@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -55,7 +55,7 @@ module.exports = {
     //     appId: JSON.stringify(process.env.REACT_APP_APPID),
     //   },
     // }),
-    new Dotenv(),
+    // new Dotenv(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
