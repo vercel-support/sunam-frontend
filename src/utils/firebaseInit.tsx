@@ -4,7 +4,6 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 firebase.initializeApp(firebaseConfig);
-console.log('init', firebaseConfig);
 
 export const app = firebase;
 export const db = firebase.firestore();
