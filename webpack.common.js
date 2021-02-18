@@ -14,6 +14,15 @@ module.exports = {
         exclude: /node-modules/,
       },
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
+      },
+      {
         enforce: 'pre',
         test: /\.js$/,
         loader: 'source-map-loader',
