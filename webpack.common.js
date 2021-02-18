@@ -44,6 +44,17 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
   },
   plugins: [
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     apiKey: JSON.stringify(process.env.REACT_APP_APIKEY),
+    //     authDomain: JSON.stringify(process.env.REACT_APP_AUTHDOMAIN),
+    //     projectId: JSON.stringify(process.env.REACT_APP_PROJECTID),
+    //     databaseURL: JSON.stringify(process.env.REACT_APP_DATABASEURL),
+    //     storageBucket: JSON.stringify(process.env.REACT_APP_STORAGEBUCKET),
+    //     messagingSenderId: JSON.stringify(process.env.REACT_APP_MESSAGINGSENDERID),
+    //     appId: JSON.stringify(process.env.REACT_APP_APPID),
+    //   },
+    // }),
     new Dotenv(),
     new HtmlWebpackPlugin({
       template: './public/index.html',

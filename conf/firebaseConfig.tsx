@@ -5,7 +5,7 @@ const firebaseConfig = {
   databaseURL: process.env.DATABASEURL,
   storageBucket: process.env.STORAGEBUCKET,
   messagingSenderId: process.env.MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_APPID,
+  appId: process.env.APPID,
 };
 
 export default firebaseConfig;

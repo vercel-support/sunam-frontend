@@ -7,6 +7,7 @@ const Main: React.FC = () => {
   return (
     <MainPageTemplate>
       <Title />
+      {process.env.PROJECTID}
       <Booking />
     </MainPageTemplate>
   );
