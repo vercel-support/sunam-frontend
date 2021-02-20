@@ -5,7 +5,6 @@ import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 // import reportWebVitals from './reportWebVitals';
 
-console.log(process.env.VERCEL_ENV);
 Sentry.init({
   dsn: `${process.env.REACT_APP_SENTRYDSN}`,
   integrations: [new Integrations.BrowserTracing()],
