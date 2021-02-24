@@ -9,7 +9,7 @@ module.exports = merge(common, {
     contentBase: './dist',
     historyApiFallback: true,
     host: 'localhost',
-    port: 3000,
+    // port: 3000,
     hot: true,
   },
 });
